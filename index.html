@@ -1,173 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Fitness Park BD | Premium Gym</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Fitness Park BD | Premium Gym</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-  margin:0;
-  font-family:'Segoe UI',sans-serif;
-  background:#0b0b0b;
-  color:#fff;
-}
+  <style>
+    body{
+      margin:0;
+      font-family:Segoe UI, sans-serif;
+      background:#0b0b0b;
+      color:#fff;
+    }
 
-header{
-  background:linear-gradient(135deg,#111,#1f1f1f);
-  padding:60px 20px;
-  text-align:center;
-}
+    header{
+      background:linear-gradient(135deg,#111,#1f1f1f);
+      padding:60px 20px;
+      text-align:center;
+    }
 
-header h1{font-size:42px;margin-bottom:10px;}
-header p{color:#bbb;font-size:18px;}
+    header h1{
+      font-size:42px;
+      margin-bottom:10px;
+    }
 
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 30px;
-  background:#ffcc00;
-  color:#000;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:30px;
-}
+    header p{
+      color:#bbb;
+      font-size:18px;
+    }
 
-section{
-  padding:60px 20px;
-  max-width:1100px;
-  margin:auto;
-}
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 30px;
+      background:#ffcc00;
+      color:#000;
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:30px;
+    }
 
-h2{
-  text-align:center;
-  margin-bottom:40px;
-  font-size:32px;
-  color:#ffcc00;
-}
+    section{
+      padding:60px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
 
-.about{
-  text-align:center;
-  color:#ccc;
-  line-height:1.7;
-}
+    h2{
+      text-align:center;
+      margin-bottom:40px;
+      color:#ffcc00;
+      font-size:32px;
+    }
 
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
+    .about{
+      text-align:center;
+      color:#ccc;
+      line-height:1.7;
+    }
 
-.card{
-  background:#161616;
-  padding:25px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 0 20px rgba(255,204,0,.08);
-}
+    /* SERVICES */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
 
-.card h3{color:#ffcc00;}
+    .card{
+      background:#161616;
+      padding:25px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 0 20px rgba(255,204,0,0.08);
+    }
 
-.offer{
-  background:#111;
-  padding:40px 20px;
-  text-align:center;
-  border-radius:16px;
-  margin:40px auto;
-}
+    .card h3{
+      color:#ffcc00;
+      margin-bottom:10px;
+    }
 
-.features{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-}
+    /* SLIDER */
+    .slider{
+      max-width:1100px;
+      margin:60px auto;
+      overflow:hidden;
+      border-radius:20px;
+    }
 
-.feature-box{
-  background:#161616;
-  padding:20px 30px;
-  border-radius:12px;
-}
+    .slides{
+      display:flex;
+      width:300%;
+      animation:slide 12s infinite;
+    }
 
-.contact{
-  text-align:center;
-  line-height:2;
-  color:#ccc;
-}
+    .slides img{
+      width:100%;
+      height:400px;
+      object-fit:cover;
+    }
 
-footer{
-  background:#111;
-  text-align:center;
-  padding:20px;
-  color:#777;
-  font-size:14px;
-}
+    @keyframes slide{
+      0%{transform:translateX(0);}
+      33%{transform:translateX(-100%);}
+      66%{transform:translateX(-200%);}
+      100%{transform:translateX(0);}
+    }
 
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#000;
-  font-size:24px;
-  padding:14px 16px;
-  border-radius:50%;
-  text-decoration:none;
-  z-index:999;
-}
-</style>
+    /* OFFER */
+    .offer{
+      background:#111;
+      text-align:center;
+      border-radius:16px;
+    }
+
+    /* FEATURES */
+    .features{
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      flex-wrap:wrap;
+    }
+
+    .feature-box{
+      background:#161616;
+      padding:20px 30px;
+      border-radius:12px;
+    }
+
+    /* CONTACT */
+    .contact{
+      text-align:center;
+      line-height:2;
+      color:#ccc;
+    }
+
+    footer{
+      background:#111;
+      text-align:center;
+      padding:20px;
+      color:#777;
+      font-size:14px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp-float{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:#000;
+      font-size:24px;
+      padding:14px 16px;
+      border-radius:50%;
+      text-decoration:none;
+      z-index:999;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-<h1>Fitness Park BD</h1>
-<p>Train Hard • Stay Strong • Live Fit</p>
-<a href="tel:01841606669" class="btn">Call Now</a>
+  <h1>Fitness Park BD</h1>
+  <p>Train Hard • Stay Strong • Live Fit</p>
+  <a href="tel:01841606669" class="btn">Call Now</a>
 </header>
 
-<section>
-<h2>About Us</h2>
-<p class="about">
-Fitness Park BD is a premium fitness destination designed for people who believe in strength, discipline, and a healthy lifestyle.
-</p>
+<!-- SLIDER -->
+<section class="slider">
+  <div class="slides">
+    <img src="images/gym1.jpg" alt="Gym Image 1">
+    <img src="images/gym2.jpg" alt="Gym Image 2">
+    <img src="images/gym3.jpg" alt="Gym Image 3">
+  </div>
 </section>
 
 <section>
-<h2>Our Services</h2>
-<div class="services">
-<div class="card"><h3>Cycling</h3><p>High-energy indoor cycling.</p></div>
-<div class="card"><h3>Nutrition Consulting</h3><p>Personalized diet guidance.</p></div>
-<div class="card"><h3>Personal Training</h3><p>One-on-one coaching.</p></div>
-<div class="card"><h3>Jogging</h3><p>Cardio endurance training.</p></div>
-</div>
+  <h2>About Us</h2>
+  <p class="about">
+    Fitness Park BD is a premium fitness destination designed for people who believe in strength,
+    discipline, and a healthy lifestyle.
+  </p>
+</section>
+
+<section>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card"><h3>Cycling</h3><p>High-energy indoor cycling.</p></div>
+    <div class="card"><h3>Nutrition Consulting</h3><p>Personalized diet guidance.</p></div>
+    <div class="card"><h3>Personal Training</h3><p>One-on-one coaching.</p></div>
+    <div class="card"><h3>Jogging</h3><p>Cardio endurance training.</p></div>
+  </div>
 </section>
 
 <section class="offer">
-<h2>Special Offer</h2>
-<p>🔥 Monthly membership starting from ৳1500</p>
-<p>🎯 Free fitness assessment for new members</p>
+  <h2>Special Offer</h2>
+  <p>🔥 Monthly membership starting from ৳1500</p>
+  <p>🎯 Free fitness assessment for new members</p>
 </section>
 
 <section>
-<h2>Facilities</h2>
-<div class="features">
-<div class="feature-box">🚗 Car Parking</div>
-<div class="feature-box">♿ Wheelchair Entrance</div>
-</div>
+  <h2>Facilities</h2>
+  <div class="features">
+    <div class="feature-box">🚗 Car Parking</div>
+    <div class="feature-box">♿ Wheelchair Entrance</div>
+  </div>
 </section>
 
 <section>
-<h2>Contact Us</h2>
-<div class="contact">
-📞 01841-606669 <br>
-📍 Pallabi Rd, Dhaka 1216
-</div>
+  <h2>Contact Us</h2>
+  <div class="contact">
+    📞 01841-606669 <br>
+    📍 Pallabi Rd, Dhaka 1216
+  </div>
 </section>
 
-<footer>© 2026 Fitness Park BD</footer>
+<footer>
+  © 2026 Fitness Park BD. All Rights Reserved.
+</footer>
 
-<a href="https://wa.me/8801841606669" class="whatsapp-float">💬</a>
+<a href="https://wa.me/8801841606669" class="whatsapp-float" target="_blank">💬</a>
 
 </body>
 </html>
